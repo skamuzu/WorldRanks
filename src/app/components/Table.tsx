@@ -32,8 +32,8 @@ const Table = () => {
             <tr key={idx} className="pb-2">
               <td className="w-1/8 text-6xl p-2">{item.flag}</td>
               <td className="w-1/5">{item.name.common}</td>
-              <td className="w-1/5">{item.population}</td>
-              <td className="w-1/5">{item.area}</td>
+              <td className="w-1/5">{item.population.toLocaleString()}</td>
+              <td className="w-1/5">{item.area.toLocaleString()}</td>
               <td className="w-1/5">{item.region}</td>
             </tr>
           ))}
