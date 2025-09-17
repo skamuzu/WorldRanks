@@ -17,7 +17,7 @@ type AppContextType = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   data: CountryData[];
   setData: React.Dispatch<React.SetStateAction<CountryData[]>>;
-  fetchAllData: Function;
+  fetchAllData: () => Promise<CountryData[]>|null;
   allData: CountryData[];
   sortBy: string;
   setSortBy: React.Dispatch<React.SetStateAction<string>>;
@@ -34,7 +34,7 @@ export const AppContext = createContext<AppContextType>({
   setData: () => {
     throw new Error("setData called outside of AppProvider");
   },
-  fetchAllData: () => undefined,
+  fetchAllData: () => null,
   allData: [],
   sortBy: "Population",
   setSortBy: () => undefined,
