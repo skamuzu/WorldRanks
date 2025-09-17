@@ -12,7 +12,7 @@ const Table = () => {
       setData(result);
     };
     loadData();
-  });
+  },[]);
 
 
   return (
