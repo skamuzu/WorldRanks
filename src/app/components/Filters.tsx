@@ -27,7 +27,7 @@ const continents = [
 const status = ["Independent", "Member of the United Nations"];
 
 const Filters = () => {
-  const { sortBy, search, setSearch } = useContext(AppContext);
+  const { sortBy, search} = useContext(AppContext);
 
   
   const toggleRegion = (name: string) => {
@@ -46,7 +46,7 @@ const Filters = () => {
   };
 
   
-  const { data, setData, allData } = useContext(AppContext);
+  const { setData, allData } = useContext(AppContext);
   const [regions, setRegions] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
 

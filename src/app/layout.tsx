@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Be_Vietnam_Pro} from "next/font/google";
+import { Be_Vietnam_Pro} from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import { AppProvider } from "./contexts/AppContext";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useContext, useRef, useEffect } from "react";
+import {  useContext, useRef, useEffect } from "react";
 import { AppContext } from "../contexts/AppContext";
 import Image from "next/image";
 
@@ -52,7 +52,7 @@ const DropDown = () => {
       {isOpen && (
         <div className="absolute z-10  w-4/5 origin-top-right bg-[#1c1d1f] border border-gray-200 rounded-xl shadow-lg">
           {sort.map((s) => 
-            <div className="hover:bg-[rgb(64,64,64)] hover:text-white outline-0 rounded-xl font-bold m-1" >
+            <div className="hover:bg-[rgb(64,64,64)] hover:text-white outline-0 rounded-xl font-bold m-1"  key={s}>
             <button className="border-0 p-3 px-5 w-full flex justify-start outline-0" onClick={()=>{setSortBy(s);setIsOpen(false);}}>{s}</button>
           </div>
           )}

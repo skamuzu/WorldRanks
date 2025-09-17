@@ -34,7 +34,7 @@ export const AppContext = createContext<AppContextType>({
   setData: () => {
     throw new Error("setData called outside of AppProvider");
   },
-  fetchAllData: Function,
+  fetchAllData: () => undefined,
   allData: [],
   sortBy: "Population",
   setSortBy: () => undefined,
